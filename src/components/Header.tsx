@@ -7,6 +7,7 @@ import {
   UserButton,
 } from '@clerk/nextjs';
 import Link from 'next/link';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   return (
@@ -24,13 +25,14 @@ const Header = () => {
               </span>
             </SignedIn>
           </div>
-          <div>
+          <div className="flex gap-6 items-center">
             <SignedOut>
               <SignInButton />
             </SignedOut>
             <SignedIn>
               <UserButton />
             </SignedIn>
+            <ThemeToggle />
           </div>
         </div>
       </Container>
