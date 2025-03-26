@@ -101,8 +101,8 @@ const Invoice = ({ invoice }: InvoiceProps) => {
           </View>
         </View>
         <View>
-          <Text style={styles.text}>Colby Fayock</Text>
-          <Text style={styles.text}>hello@colbyfayock.com</Text>
+          <Text style={styles.text}>Jamin Roberts</Text>
+          <Text style={styles.text}>hello@hebuildswebsites.com</Text>
         </View>
       </Page>
     </Document>
