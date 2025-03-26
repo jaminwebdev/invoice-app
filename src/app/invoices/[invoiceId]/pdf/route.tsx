@@ -111,9 +111,9 @@ const Invoice = ({ invoice }: InvoiceProps) => {
 
 export async function GET(
   request: Request,
-  { params }: { params: { invoiceId: string } }
+  context: { params: { invoiceId: string } }
 ) {
-  const { invoiceId } = await params;
+  const { invoiceId } = await context.params;
 
   const { userId, orgId } = await auth();
 
