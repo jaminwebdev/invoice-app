@@ -118,7 +118,11 @@ export async function GET(
 
   const { userId, orgId } = await auth();
 
-  if (!userId) return null;
+  if (!userId) {
+    return new Response(`You must be logged in to generate a PDF`, {
+      status: 400,
+    });
+  }
 
   if (isNaN(parseInt(invoiceId))) {
     throw new Error('Invalid invoice ID');
