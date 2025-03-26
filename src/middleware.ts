@@ -7,9 +7,9 @@ const isPublic = createRouteMatcher([
   '/invoices/(.*)/payment',
 ]);
 
-export default clerkMiddleware((auth, request) => {
+export default clerkMiddleware(async (auth, request) => {
   if (!isPublic(request)) {
-    auth.protect();
+    await auth.protect();
   }
 });
 
