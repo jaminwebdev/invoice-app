@@ -1,5 +1,11 @@
 'use client';
-import { ChevronDown, CreditCard, Ellipsis, Trash2 } from 'lucide-react';
+import {
+  ChevronDown,
+  CreditCard,
+  Download,
+  Ellipsis,
+  Trash2,
+} from 'lucide-react';
 import { useOptimistic } from 'react';
 
 import Container from '@/components/Container';
@@ -126,6 +132,15 @@ export default function Invoice({ invoice }: InvoiceProps) {
                     >
                       <CreditCard className="w-4 h-auto" />
                       Payment
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    <Link
+                      href={`/invoices/${invoice.id}/pdf`}
+                      className="flex items-center gap-2"
+                    >
+                      <Download className="w-4 h-auto" />
+                      Download
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
