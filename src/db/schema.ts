@@ -7,7 +7,7 @@ import {
   timestamp,
 } from 'drizzle-orm/pg-core';
 
-import { AVAILABLE_STATUSES } from '@/data/invoices';
+import { AVAILABLE_STATUSES } from '@/db/data/invoices';
 
 export type Status = (typeof AVAILABLE_STATUSES)[number]['id'];
 
